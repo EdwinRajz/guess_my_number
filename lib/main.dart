@@ -67,14 +67,17 @@ class _MyAppState extends State<MyApp> {
               );
             }
             if (guess == null) {
+              // todo: #1 specify the type for snackBar
               final snackBar = SnackBar(
                 content: Text('No Value entered, please provide a number'),
               );
               Scaffold.of(context).showSnackBar(snackBar);
             } else if (guess > i) {
+              // todo: #2 specify the type for snackBar
               final snackBar = SnackBar(content: Text('The value is too high'));
               Scaffold.of(context).showSnackBar(snackBar);
             } else if (guess < i) {
+              // todo: #3 specify the type for snackBar
               final snackBar = SnackBar(
                 content: Text('The value is too low'),
               );
@@ -84,6 +87,7 @@ class _MyAppState extends State<MyApp> {
           },
           child: Text('Check'),
         );
+        // todo: #4 don't forget to format your code
       },),
     );
   }
