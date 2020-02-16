@@ -68,20 +68,20 @@ class _MyAppState extends State<MyApp> {
             }
             if (guess == null) {
               // todo: #1 specify the type for snackBar
-              final snackBar = SnackBar(
+              final noValueBar = SnackBar(
                 content: Text('No Value entered, please provide a number'),
               );
-              Scaffold.of(context).showSnackBar(snackBar);
+              Scaffold.of(context).showSnackBar(noValueBar);
             } else if (guess > i) {
               // todo: #2 specify the type for snackBar
-              final snackBar = SnackBar(content: Text('The value is too high'));
-              Scaffold.of(context).showSnackBar(snackBar);
+              final tooHighBar = SnackBar(content: Text('The value is too high'));
+              Scaffold.of(context).showSnackBar(tooHighBar);
             } else if (guess < i) {
               // todo: #3 specify the type for snackBar
-              final snackBar = SnackBar(
+              final tooLowBar = SnackBar(
                 content: Text('The value is too low'),
               );
-              Scaffold.of(context).showSnackBar(snackBar);
+              Scaffold.of(context).showSnackBar(tooLowBar);
             }
             controller1.clear();
           },
